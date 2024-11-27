@@ -32,5 +32,4 @@ export class ApiService {
     const payload = {themeName, postText}
     return this.http.post<Theme>(`${apiUrl}/themes`,payload);
   }
-
 }

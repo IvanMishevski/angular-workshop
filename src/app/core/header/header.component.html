@@ -1,21 +1,32 @@
 <header>
     <div class="mini-navbar-wrap">
         <div class="logo-wrap">
-            <img src="images/logo.png" > 
+            <img src="images/logo.png">
             <p class="logo"> SoftUni Forum</p>
         </div>
-        @if (isLoggedIn) {
-            <div class="mini-navbar">
-                <ul>
-                    <li>
-                        <a routerLink="/login">Login</a>
-                    </li>
-                    <li>
-                        <a routerLink="/register">Register</a>
-                    </li>
-                </ul>
-            </div>
-        }     
+        @if (!isLoggedIn) {
+        <div class="mini-navbar">
+            <ul>
+                <li>
+                    <a routerLink="/login">Login</a>
+                </li>
+                <li>
+                    <a routerLink="/register">Register</a>
+                </li>
+            </ul>
+        </div>
+        }@else {
+        <div class="mini-navbar">
+            <ul>
+                <li>
+                    <a routerLink="/profile">Profile</a>
+                </li>
+                <li>
+                    <a routerLink="/logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+        }
     </div>
     <nav>
         <ul>
@@ -32,4 +43,3 @@
     </nav>
 
 </header>
-

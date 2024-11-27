@@ -15,6 +15,7 @@ export const routes: Routes = [
     {path:'login',component:LoginComponent},
     {path:'register',component:RegisterComponent},
     {path:'profile',component:ProfileComponent},
+    {path:'logout',component:ProfileComponent},
     //start theme routing
     {path:'themes', children:[
     {path: '', component:MainComponent},
