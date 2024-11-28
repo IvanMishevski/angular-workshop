@@ -6,7 +6,7 @@ export function emailValidator(domains: string[]): ValidatorFn {
 
     return (control) => {
         const isValid = control.value === '' || regExp.test(control.value);
-        console.log(isValid);
+        
 
         return isValid ? null : {emailValidator: true};
     }
