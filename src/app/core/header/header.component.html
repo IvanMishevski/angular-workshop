@@ -19,10 +19,10 @@
         <div class="mini-navbar">
             <ul>
                 <li>
-                    <a routerLink="/profile">Profile</a>
+                    <a routerLink="/profile">{{username}}'s Profile</a>
                 </li>
                 <li>
-                    <a routerLink="/logout">Logout</a>
+                    <a (click)="logout()">Logout</a>
                 </li>
             </ul>
         </div>
@@ -36,9 +36,11 @@
             <li>
                 <a routerLink="/themes">Themes</a>
             </li>
+            @if (isLoggedIn) {
             <li>
                 <a routerLink="/add-theme">New Theme</a>
             </li>
+            }
         </ul>
     </nav>
 
